@@ -1,0 +1,35 @@
+<ion-card>
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-card-content>
+    <ion-grid [ngStyle]="{'text-align':justify}">
+      <ion-row><ion-col><h1>{{subject}}</h1></ion-col></ion-row> 
+       <ion-row><ion-col size='2'>From</ion-col><ion-col size='0.5'>:</ion-col><ion-col>{{sender_email}}</ion-col></ion-row> 
+       <ion-row><ion-col size='2'>To</ion-col><ion-col size='0.5'>:</ion-col><ion-col>{{recipent_email}}</ion-col></ion-row>
+       <ion-row><ion-col [ngStyle]="{'text-align':'justify','line-height':'25px'}">{{body_email}}</ion-col></ion-row>
+       <ion-row><ion-col [ngStyle]="{'text-align':'justify','line-height':'25px','font-size':'12px'}">{{time_stamp}}</ion-col></ion-row>
+     </ion-grid>
+  </ion-card-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button *ngIf="starEmail=='1'" (click)="unstarred()" color="success" [ngStyle]="{'width':'100%'}">
+          <ion-icon name="star" slot="start"></ion-icon>
+        </ion-button>
+        <ion-button *ngIf="starEmail=='0'" (click)="starred()" color="warning" [ngStyle]="{'width':'100%'}">
+          <ion-icon name="star" slot="start"></ion-icon>
+        </ion-button>
+        
+      </ion-col>
+      <ion-col>
+        <ion-button [color]="btnColor2" (click)="deleteM()" [ngStyle]="{'width':'100%'}">
+          <ion-icon name="trash" slot="start"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button routerLink='/reply/{{id}}' [ngStyle]="{'width':'100%'}">Reply</ion-button>
+      </ion-col>
+     </ion-row>  
+  </ion-grid>  
+</ion-card>

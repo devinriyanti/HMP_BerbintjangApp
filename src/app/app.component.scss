@@ -1,0 +1,100 @@
+ion-toolbar {
+  --background: #24558a;
+  --color: white;
+}
+ion-content{
+    // --ion-background-color:#fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ion-card{
+    background: transparent;
+    box-shadow: none;
+    text-align: center;
+
+    ion-card-title{
+        color:#ffffff;
+        font-size: 30px;
+    }
+
+    ion-card-subtitle{
+        color:#BBBBBB;
+        font-size: 14px;
+        font-weight: 400; 
+
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            color: #54779e;
+            font-size: 15;
+        }
+    }
+
+    ion-card-content{
+        margin-top: 30px;
+
+        ion-item{
+            --ion-item-background:transparent;
+            --border-width:0;
+            --inner-border-width:0;
+            --highlight-color-focused:none;
+            margin-bottom: 15px;
+
+            ion-input{
+                width:257px;
+                height: 42px;
+                border-radius: 15px;
+                border:  1px solid #93b7d7;
+                font-size: 14px;
+                font-weight: 300;
+                color:#dedfdf;
+                --padding-start:30px;
+            }
+
+        }
+
+        a{
+            text-decoration: none;
+            color:#7b9cac;
+            font-weight: 300;
+            font-size: 13px;
+        }
+    }
+
+    .btnInput{
+        height: 50px;
+        width: 150px;
+        font-size: 15px;
+        text-transform: none;
+        --background:#d35252;
+        font-weight: 400;
+        --border-radius: 10px !important;
+        color:#fff;
+    }
+  
+    .bottom-section{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ion-button{
+        height: 50px;
+        width: 150px;
+        font-size: 15px;
+        text-transform: none;
+        --background:#d35252;
+        font-weight: 400;
+        --border-radius: 10px !important;
+        color:#fff;
+    }
+
+    span{
+        margin-top: 10px;
+        font-weight: 330;
+        a{
+            font-weight: 400;
+        }
+    }
+    }
+
+}

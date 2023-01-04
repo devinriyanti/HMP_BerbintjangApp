@@ -1,0 +1,21 @@
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-grid [ngStyle]="{'text-align':justify}">
+        <ion-row>
+          <ion-col size='2'>To</ion-col>
+          <ion-col size='0.5'>:</ion-col>
+          <ion-col>{{to}}</ion-col>
+        </ion-row>
+        <!-- <ion-row><ion-col [ngStyle]="{'text-align':'justify','line-height':'25px'}">{{bodyMail}}</ion-col></ion-row> -->
+        <ion-item>
+          <ion-label position='floating'>Message</ion-label>
+          <ion-input [(ngModel)]="bodyMail"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-button expand='block' (click)="sendMail()">Send</ion-button>
+        </ion-item>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+</ion-grid>

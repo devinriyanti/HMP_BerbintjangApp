@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-searchbar (ionChange)="search($event)"></ion-searchbar>
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  </ion-toolbar>
+</ion-header>
+<ion-list>
+  <ion-item *ngFor="let er of email">
+    <ion-label routerLink='/detailemail/{{er.id}}'>
+      <h2>{{er.full_name}}</h2>
+      <h3>{{er.subject}}</h3>
+      <p>{{er.body_email}}</p>
+      <!-- <ion-col size="8">
+        <ion-label class="ion-text-wrap ion-text-capitalize" [style.font-weight]="!er.read ? 'bold' : ''">
+          {{er.from.split(@)[0]}}
+          <p class="em">
+            {{ (er.content.length>50)? (er.content | slice:0:50)+'...':(er.content) }}
+          </p>
+        </ion-label>
+      </ion-col> -->
+    </ion-label>
+  </ion-item>
+</ion-list>

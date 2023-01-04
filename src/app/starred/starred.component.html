@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-searchbar (ionChange)="search($event)"></ion-searchbar>
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  </ion-toolbar>
+</ion-header>
+<ion-list>
+  <ion-item *ngFor="let er of starredEmail">
+    <ion-label routerLink='/detailemail/{{er.id}}'>
+        <h2>{{er.full_name}}</h2>
+        <h3>{{er.subject}}</h3>
+        <p>{{er.body_email}}</p>
+    </ion-label>
+  </ion-item>
+</ion-list>

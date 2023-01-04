@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="user">
+    <ion-item *ngFor="let us of profile;let i = index"></ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input disabled="true" [(ngModel)]="email">{{us.email}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Change Full Name</ion-label>
+      <ion-input [(ngModel)]="full_name">{{us.full_name}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Change Password</ion-label>
+      <ion-input [type]="pwdType" [(ngModel)]="password">{{us.password}}
+        <ion-icon name="eye" item-end (click)="togglePwd()"></ion-icon>
+      </ion-input>
+    </ion-item>
+    <div>
+      <ion-button (click)="edit_profile()">SAVE CHANGES</ion-button>
+      <ion-chip *ngIf="edit_profile_error">{{edit_profile_error}}</ion-chip>
+    </div>
+  </div>
+</ion-content>
